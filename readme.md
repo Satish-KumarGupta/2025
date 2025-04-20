@@ -7,4 +7,4 @@
 
 # crearte connection with mongoose.
 # Added schema of database in models folder.
-# Created Connction Object in database folder.
+# Created Connection Object in database folder.
