@@ -15,3 +15,6 @@ Parse JSON                      	✅ Built-in	                ✅ External
 Parse form data (URL-encoded)   	✅ express.urlencoded()	    ✅ bodyParser.urlencoded()
 Using Express < 4.16            	❌                          	✅ Required
 Using Express >= 4.16	            ✅ Use Express's built-in	Optional
+
+# use bcrypt to store password in encoded form
+#### create api for login

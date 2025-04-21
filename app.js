@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const PORT = process.env.PORT || "3000";
 
-app.use("/register", userRouter);
+app.use("/api/v1", userRouter);
 
 app.listen(PORT, () => {
   console.log(`server running on port no ${PORT}`);
