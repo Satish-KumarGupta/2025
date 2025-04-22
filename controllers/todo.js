@@ -28,3 +28,15 @@ export const getAllTodo = async (req, res) => {
     result: totos.length === 0 ? [] : totos,
   });
 };
+
+export const updateTodo = async (req, res) => {
+  const id = req.params.todoId;
+  const {title}=req.body;
+  const todo = await Todo.findByIdAndUpdate(id, {title}, { new: true });
+  
+  return res.status(200).json({
+    succes: true,
+    result: todo,
+    message: "Update success",
+  });
+};
