@@ -18,3 +18,8 @@ Using Express >= 4.16	            ✅ Use Express's built-in	Optional
 
 # use bcrypt to store password in encoded form
 #### create api for login
+#### create an api to insert record on todo collection 
+
+## some time database not insert data and give error like
+MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted.
+# then go the network Access and add current IP.
