@@ -22,4 +22,6 @@ Using Express >= 4.16	            ✅ Use Express's built-in	Optional
 
 ## some time database not insert data and give error like
 MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted.
-# then go the network Access and add current IP.
+## then go the network Access and add current IP.
+## we can use single route for diffrent method like here we use for save and find.
+router.route("/").post(createTodo).get(getAllTodo);

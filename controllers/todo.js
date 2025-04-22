@@ -20,3 +20,11 @@ export const createTodo = async (req, res) => {
     console.log(error);
   }
 };
+
+export const getAllTodo = async (req, res) => {
+  const totos = await Todo.find();
+  return res.status(200).json({
+    succes: true,
+    result: totos.length === 0 ? [] : totos,
+  });
+};
