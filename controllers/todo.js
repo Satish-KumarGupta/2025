@@ -2,6 +2,7 @@ import { Todo } from "../models/todo.js";
 
 export const createTodo = async (req, res) => {
   try {
+    console.log("call")
     const { title, description } = req.body;
     if (!title || !description) {
       return res.status(403).json({
