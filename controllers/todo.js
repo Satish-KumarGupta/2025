@@ -31,12 +31,21 @@ export const getAllTodo = async (req, res) => {
 
 export const updateTodo = async (req, res) => {
   const id = req.params.todoId;
-  const {title}=req.body;
-  const todo = await Todo.findByIdAndUpdate(id, {title}, { new: true });
-  
+  const { title } = req.body;
+  const todo = await Todo.findByIdAndUpdate(id, { title }, { new: true });
+
   return res.status(200).json({
     succes: true,
     result: todo,
     message: "Update success",
+  });
+};
+export const deleteTodo = async (req, res) => {
+  const id = req.params.todoId;
+  await Todo.findByIdAndDelete(id);
+
+  return res.status(200).json({
+    succes: true,
+    message: "delete success",
   });
 };
